@@ -6,7 +6,7 @@ login and no scraping. The companies searched come from data/companies.toml.
 
 Usage:
   python tools/ats_search.py search --keywords "backend,sde,software engineer" [--exclude "senior,staff,lead"]
-         [--city bengaluru --city hyderabad] [--remote] [--days 30] [--company CRED] [--limit 50]
+         [--city bengaluru --city hyderabad] [--remote] [--company CRED] [--limit 50]
   python tools/ats_search.py detail <posting-url>
   python tools/ats_search.py discover "Company Name" [--slug guess]
   python tools/ats_search.py check
@@ -340,7 +340,7 @@ def main(argv=None) -> int:
     s.add_argument("--exclude", action="append", help="drop titles containing any of these (comma-separated)")
     s.add_argument("--city", action="append", help="keep roles in these Indian cities (repeatable)")
     s.add_argument("--remote", action="store_true", help="with --city, also keep remote India roles")
-    s.add_argument("--days", type=int, help="only roles posted in the last N days")
+    s.add_argument("--days", type=int, help="only roles first published in the last N days; boards list only open roles, many open for months, so usually leave this off")
     s.add_argument("--company", action="append", help="limit to these registry companies")
     s.add_argument("--anywhere", action="store_true", help="include roles outside India")
     s.add_argument("--limit", type=int)
