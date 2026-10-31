@@ -113,6 +113,12 @@ def test_search_end_to_end_offline(fixture_json, monkeypatch, capsys, tmp_path):
     assert [e["company"] for e in out["meta"]["errors"]] == ["Down"]
     assert {j["title"] for j in out["results"]} == {"Software Development Engineer - Backend", "SDE 1 - Backend (Java)"}
     assert all("description" not in j for j in out["results"])
+    assert out["meta"]["matched"] == out["meta"]["returned"] == 2
+
+    ats_search.main(["--registry", str(registry), "search", "--keywords", "engineer,sde", "--city", "Bangalore", "--limit", "1"])
+    limited = json.loads(capsys.readouterr().out)
+    assert limited["meta"]["matched"] == 2
+    assert limited["meta"]["returned"] == len(limited["results"]) == 1
 
 
 def test_unknown_city_is_an_error(capsys):
