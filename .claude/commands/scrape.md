@@ -5,12 +5,13 @@ Arguments (optional): `$ARGUMENTS`, e.g. "intern roles in Hyderabad, last 7 days
 Read `profile/preferences.md` and the job-scraper skill (`.claude/skills/job-scraper/SKILL.md`). Use a scratch folder (the session's scratchpad, or `job_scraper/tmp/`) for intermediate JSON.
 
 ## Step 1: Build the search from preferences plus arguments
-Keywords from target titles and search keywords; excludes from "title words to exclude"; cities from the location list; `--days 14` unless asked otherwise. Arguments override preferences for this run only.
+Keywords from target titles and search keywords; excludes from "title words to exclude"; cities from the location list. Use `--days 14` for LinkedIn only (see Step 2 for why company boards get no date filter). Arguments override preferences for this run only.
 
 ## Step 2: Company boards
 ```
-python tools/ats_search.py search --keywords "<k1,k2,...>" --exclude "<x1,...>" --city <c1> --city <c2> [--remote] --days 14 > <scratch>/ats.json
+python tools/ats_search.py search --keywords "<k1,k2,...>" --exclude "<x1,...>" --city <c1> --city <c2> [--remote] > <scratch>/ats.json
 ```
+Don't pass `--days` here. Company boards list only roles that are open right now, and many stay open for months after they were first published, so a date filter silently drops live jobs. Step 4 already keeps only the roles you haven't seen before.
 Report any `errors` in one line (a board that moved; suggest `python tools/ats_search.py check`).
 
 ## Step 3: LinkedIn
