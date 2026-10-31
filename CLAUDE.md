@@ -30,3 +30,4 @@ If `profile/` does not exist yet, tell the user to run `/setup` first.
 5. **Tools before prose.** Use `tools/state.py` for history and the tracker, `tools/ats_search.py` and `tools/linkedin_search.py` for search, and `tools/verify_pdf.py` for every PDF. Don't paste large JSON back to the user; summarise it.
 6. **Windows.** Run tools as `python tools/...` on Windows and `python3 tools/...` on macOS/Linux. Paths in this file use forward slashes; both work.
 7. **Keep replies short.** The user wants the work product, not a narration of it.
+8. **Contacts are for one role at a time.** Look up someone's email with `tools/contact_lookup.py` only for a role the user is pursuing and only when they ask. Never compile lists of people or emails beyond what one application needs, never work around the daily cap, and never read `.env`; the tool reads the keys itself.

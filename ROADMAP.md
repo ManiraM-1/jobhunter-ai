@@ -5,7 +5,6 @@ JobHunter's direction: **fewer, better applications, and a human on the other en
 Pick anything here and comment on the matching issue before starting, so two people don't build the same thing.
 
 ## In progress
-- **Contact lookup.** Find the hiring manager's work email for one role you applied to, using your own Hunter or Apollo API key. One person at a time, with a confidence score.
 - **Email drafts.** `/outreach` writes the email as a ready-to-send draft (Gmail Drafts if a Gmail connector is set up, otherwise a file any mail app opens). You always click Send.
 
 ## Next

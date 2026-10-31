@@ -65,6 +65,16 @@ claude
 
 Claude Code only loads the `/setup`, `/scrape`, `/apply` commands from the `.claude/` folder of the directory you start it in. If typing `/` doesn't list them (they're marked *project*), you started it somewhere else. Say **Yes** if it asks whether to trust the folder.
 
+## 5. Optional: work-email lookup for outreach
+
+`/outreach` can find a hiring manager's work email if you bring your own API key. Without one, it still drafts LinkedIn notes and referral asks.
+
+1. Copy `.env.example` to `.env` (in the repo folder). `.env` is git-ignored.
+2. Add a key from [Hunter](https://hunter.io) (Dashboard → API) and/or [Apollo](https://apollo.io) (Settings → Integrations → API keys). Check each service's current plan: free tiers are small and API access varies by plan.
+3. Check it: `python tools/contact_lookup.py status` should show `configured`.
+
+Lookups are one person at a time, capped per day (`JOBHUNTER_LOOKUP_DAILY_CAP`, default 20), and cached in `applications/contacts.json` so the same person never costs a second credit.
+
 ## Troubleshooting
 
 | Problem | Fix |
