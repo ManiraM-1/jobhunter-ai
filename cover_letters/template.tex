@@ -1,0 +1,55 @@
+% One-page cover letter. Build with pdflatex (xelatex also works).
+% Example content is fictional; /apply replaces all of it.
+\documentclass[11pt,a4paper]{article}
+
+\usepackage{iftex}
+% Engine setup. Every branch keeps the PDF text clean for ATS parsers: real
+% Unicode mapping, no "fi"/"ff" ligature glyphs, and words that extract whole.
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \input{glyphtounicode}
+  \pdfgentounicode=1
+  \usepackage{lmodern}
+\else\ifXeTeX
+  \usepackage{fontspec}
+  \setmainfont{Latin Modern Roman}[Ligatures={NoCommon,NoRequired},Kerning=Off]
+\else
+  \usepackage[T1]{fontenc}
+  \usepackage{lmodern}
+  % lualatex compiles but its PDFs extract ligatures and split words; use pdflatex.
+\fi\fi
+\usepackage[a4paper,margin=2.2cm]{geometry}
+\usepackage[hidelinks]{hyperref}
+\usepackage{xcolor}
+\definecolor{accent}{HTML}{1F4E79}
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{8pt}
+
+\begin{document}
+
+{\Large\bfseries\color{accent} Aarav Sharma}\\
+Bengaluru $\cdot$ +91 98765 43210 $\cdot$ \href{mailto:aarav.sharma@example.com}{aarav.sharma@example.com} $\cdot$ \href{https://github.com/aarav-example}{github.com/aarav-example}
+
+31 October 2026
+
+Hiring Team, Platform Engineering\\
+Example Fintech Pvt.\ Ltd., Bengaluru
+
+\textbf{Re: Software Development Engineer 1, Payments Platform}
+
+Dear Hiring Team,
+
+Your posting describes reconciliation and settlement services that have to be correct before they are fast. That is the problem I spent my internship on: I built a Java and Spring Boot service that matches UPI settlement files against ledger entries, which replaced a manual daily check at Example Payments.
+
+The role asks for backend work on AWS with solid CI. I moved three scheduled jobs to AWS Lambda with failure alerts, and added test and build checks to our pull requests in GitHub Actions. Outside work, I built a campus bus tracker in FastAPI and PostgreSQL that the transport office used for a semester, where I learned to design APIs around stale data.
+
+Your engineering blog post on idempotent payment retries is the clearest explanation I have read of why exactly-once is a design choice rather than a guarantee, and it is the kind of work I want to do next. I can join from January 2027.
+
+Thank you for your time.
+
+Regards,\\
+Aarav Sharma
+
+\end{document}

@@ -1,0 +1,22 @@
+[
+  {
+    "id": "aa98a938-af3a-45f5-851d-966b2b5bad33",
+    "text": "SDE 1 - Backend (Java)",
+    "hostedUrl": "https://jobs.lever.co/examplecred/aa98a938-af3a-45f5-851d-966b2b5bad33",
+    "createdAt": 1761000000000,
+    "categories": {"location": "bengaluru", "team": "Engineering", "commitment": "Full-time", "allLocations": ["bengaluru", "Remote - India"]},
+    "workplaceType": "hybrid",
+    "country": "IN",
+    "descriptionPlain": "You will build services in Java and Spring Boot.",
+    "lists": [{"text": "What you need", "content": "<li>1-2 years with Java</li><li>AWS</li>"}],
+    "additionalPlain": "Equal opportunity employer."
+  },
+  {
+    "id": "bb11b938-af3a-45f5-851d-966b2b5bad34",
+    "text": "Account Executive",
+    "hostedUrl": "https://jobs.lever.co/examplecred/bb11b938-af3a-45f5-851d-966b2b5bad34",
+    "createdAt": 1758000000000,
+    "categories": {"location": "Dubai", "team": "Sales", "commitment": "Full-time"},
+    "descriptionPlain": "Sell."
+  }
+]

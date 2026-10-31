@@ -1,0 +1,29 @@
+{
+  "apiVersion": "1",
+  "jobs": [
+    {
+      "id": "6f1c2a10-1111-4c4c-9e9e-000000000001",
+      "title": "Software Engineer Intern",
+      "department": "Engineering",
+      "team": "Platform",
+      "employmentType": "Intern",
+      "location": "Bengaluru",
+      "secondaryLocations": [{"location": "Remote (India)"}],
+      "publishedAt": "2026-10-28T08:00:00.000+00:00",
+      "isListed": true,
+      "isRemote": false,
+      "workplaceType": "Hybrid",
+      "jobUrl": "https://jobs.ashbyhq.com/exampleatlas/6f1c2a10-1111-4c4c-9e9e-000000000001",
+      "applyUrl": "https://jobs.ashbyhq.com/exampleatlas/6f1c2a10-1111-4c4c-9e9e-000000000001/application",
+      "descriptionPlain": "Six-month internship with PPO opportunity. Stipend 50,000 per month.",
+      "compensation": {"compensationTierSummary": "₹50K per month"}
+    },
+    {
+      "id": "6f1c2a10-1111-4c4c-9e9e-000000000002",
+      "title": "Unlisted role",
+      "location": "Bengaluru",
+      "isListed": false,
+      "jobUrl": "https://jobs.ashbyhq.com/exampleatlas/6f1c2a10-1111-4c4c-9e9e-000000000002"
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+# Your personal data. Never committed.
+profile/
+applications/
+job_scraper/
+documents/*
+!documents/README.md
+.env
+.env.*
+
+# LaTeX build files
+*.aux
+*.log
+*.out
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+*.toc
+cv/*.pdf
+cover_letters/*.pdf
+
+# Python
+__pycache__/
+*.pyc
+.pytest_cache/
+.ruff_cache/
+.venv/
+venv/
+
+# Claude Code local settings
+.claude/settings.local.json
+
+# OS
+.DS_Store
+Thumbs.db

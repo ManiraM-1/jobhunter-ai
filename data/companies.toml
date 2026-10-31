@@ -1,0 +1,110 @@
+# Companies whose public job boards /scrape searches directly.
+#
+# Every entry here was checked against the live board feed and had open roles
+# in India on the date in `verified`. Boards move (a company switches ATS or
+# renames its board), so `python tools/ats_search.py check` re-verifies the list.
+#
+# Add your own targets with /add-company, or by hand:
+#   python tools/ats_search.py discover "Company Name"
+# then paste the [[company]] block it prints.
+#
+# ats:  greenhouse | lever | ashby
+# slug: the board name in the URL, e.g. jobs.lever.co/<slug>
+
+[[company]]
+name = "Razorpay"
+ats = "greenhouse"
+slug = "razorpaysoftwareprivatelimited"
+sector = "fintech"
+verified = "2026-10-31"
+
+[[company]]
+name = "Groww"
+ats = "greenhouse"
+slug = "groww"
+sector = "fintech"
+verified = "2026-10-31"
+
+[[company]]
+name = "Druva"
+ats = "greenhouse"
+slug = "druva"
+sector = "saas"
+verified = "2026-10-31"
+
+[[company]]
+name = "InMobi"
+ats = "greenhouse"
+slug = "inmobi"
+sector = "adtech"
+verified = "2026-10-31"
+
+[[company]]
+name = "CRED"
+ats = "lever"
+slug = "cred"
+sector = "fintech"
+verified = "2026-10-31"
+
+[[company]]
+name = "Meesho"
+ats = "lever"
+slug = "meesho"
+sector = "ecommerce"
+verified = "2026-10-31"
+
+[[company]]
+name = "Zeta"
+ats = "lever"
+slug = "zeta"
+sector = "fintech"
+verified = "2026-10-31"
+
+[[company]]
+name = "Paytm"
+ats = "lever"
+slug = "paytm"
+sector = "fintech"
+verified = "2026-10-31"
+
+[[company]]
+name = "Safe Security"
+ats = "lever"
+slug = "safe"
+sector = "security"
+verified = "2026-10-31"
+
+[[company]]
+name = "Acceldata"
+ats = "lever"
+slug = "acceldata"
+sector = "data"
+verified = "2026-10-31"
+
+[[company]]
+name = "Nium"
+ats = "lever"
+slug = "nium"
+sector = "fintech"
+verified = "2026-10-31"
+
+[[company]]
+name = "Gushwork"
+ats = "lever"
+slug = "gushwork"
+sector = "ai"
+verified = "2026-10-31"
+
+[[company]]
+name = "Mindtickle"
+ats = "lever"
+slug = "mindtickle"
+sector = "saas"
+verified = "2026-10-31"
+
+[[company]]
+name = "Atlan"
+ats = "ashby"
+slug = "atlan"
+sector = "data"
+verified = "2026-10-31"

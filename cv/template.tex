@@ -1,0 +1,91 @@
+% One-page, single-column, ATS-friendly CV for Indian tech roles.
+% Build with pdflatex (xelatex also works). /setup copies this to profile/master_cv.tex.
+% Example content below is fictional; replace all of it.
+\documentclass[10.5pt,a4paper]{article}
+
+\usepackage{iftex}
+% Engine setup. Every branch keeps the PDF text clean for ATS parsers: real
+% Unicode mapping, no "fi"/"ff" ligature glyphs, and words that extract whole.
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \input{glyphtounicode}
+  \pdfgentounicode=1
+  \usepackage{lmodern}
+\else\ifXeTeX
+  \usepackage{fontspec}
+  \setmainfont{Latin Modern Roman}[Ligatures={NoCommon,NoRequired},Kerning=Off]
+\else
+  \usepackage[T1]{fontenc}
+  \usepackage{lmodern}
+  % lualatex compiles but its PDFs extract ligatures and split words; use pdflatex.
+\fi\fi
+\usepackage[a4paper,margin=1.6cm,top=1.3cm,bottom=1.3cm]{geometry}
+\usepackage[hidelinks]{hyperref}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{xcolor}
+\usepackage{tabularx}
+\usepackage{microtype}
+\ifPDFTeX\else\microtypesetup{protrusion=false,expansion=false}\fi
+
+\definecolor{accent}{HTML}{1F4E79}
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlist[itemize]{leftmargin=1.1em,itemsep=1pt,topsep=2pt,parsep=0pt}
+\titleformat{\section}{\large\bfseries\color{accent}}{}{0pt}{}[\vspace{1pt}\titlerule]
+\titlespacing*{\section}{0pt}{8pt}{4pt}
+
+\newcommand{\entry}[4]{%
+  \textbf{#1} \hfill #2\\
+  \textit{#3} \hfill \textit{#4}\par\vspace{1pt}}
+\newcommand{\project}[3]{%
+  \textbf{#1} $\vert$ \textit{#2} \hfill #3\par\vspace{1pt}}
+
+\begin{document}
+
+\begin{center}
+  {\LARGE\bfseries Aarav Sharma}\\[3pt]
+  Bengaluru, India $\cdot$ +91 98765 43210 $\cdot$
+  \href{mailto:aarav.sharma@example.com}{aarav.sharma@example.com} $\cdot$
+  \href{https://linkedin.com/in/aarav-sharma-example}{linkedin.com/in/aarav-sharma-example} $\cdot$
+  \href{https://github.com/aarav-example}{github.com/aarav-example}
+\end{center}
+
+\section{Education}
+\entry{Example Institute of Technology}{2022 -- 2026}{B.Tech, Computer Science and Engineering}{CGPA 8.7/10}
+
+\section{Experience}
+\entry{Example Payments Pvt.\ Ltd.}{Jan 2026 -- Jun 2026}{Software Engineer Intern, Platform Team}{Bengaluru}
+\begin{itemize}
+  \item Built a reconciliation service in Java and Spring Boot that matches UPI settlement files against ledger entries, replacing a manual daily spreadsheet check.
+  \item Moved three batch jobs from cron on a VM to AWS Lambda with EventBridge schedules, with alerts on failure through CloudWatch.
+  \item Added GitHub Actions checks (tests, lint, container build) to the service's pull requests; reviewed by the team lead before merge.
+\end{itemize}
+
+\section{Projects}
+\project{Campus Bus Tracker}{Python, FastAPI, PostgreSQL, React}{\href{https://github.com/aarav-example/bus-tracker}{github}}
+\begin{itemize}
+  \item Live bus locations from drivers' phones, shown on a map to students; used by the college transport office during the 2025 semester.
+  \item Designed the location-update API with rate limiting and a 30-second staleness rule so the map never shows old positions as current.
+\end{itemize}
+\project{Resume Q\&A Bot}{Python, LangChain, FAISS}{\href{https://github.com/aarav-example/resume-bot}{github}}
+\begin{itemize}
+  \item Retrieval-augmented chatbot that answers questions about a set of resumes, with citations to the source page.
+\end{itemize}
+
+\section{Skills}
+\begin{tabularx}{\linewidth}{@{}l X@{}}
+  \textbf{Languages} & Java, Python, SQL, JavaScript \\
+  \textbf{Frameworks} & Spring Boot, FastAPI, React \\
+  \textbf{Cloud \& DevOps} & AWS (Lambda, S3, EC2, CloudWatch), Docker, GitHub Actions \\
+  \textbf{Data} & PostgreSQL, MySQL, Redis \\
+\end{tabularx}
+
+\section{Achievements}
+\begin{itemize}
+  \item Finalist, Example State Hackathon 2025 (team of 4, 300+ teams).
+  \item LeetCode: 450+ problems solved; contest rating 1750.
+\end{itemize}
+
+\end{document}
