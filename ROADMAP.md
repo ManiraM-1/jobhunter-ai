@@ -4,9 +4,6 @@ JobHunter's direction: **fewer, better applications, and a human on the other en
 
 Pick anything here and comment on the matching issue before starting, so two people don't build the same thing.
 
-## In progress
-- **Email drafts.** `/outreach` writes the email as a ready-to-send draft (Gmail Drafts if a Gmail connector is set up, otherwise a file any mail app opens). You always click Send.
-
 ## Next
 - **Fill the form, you submit.** Open Greenhouse and Lever application forms (most don't need an account) in your own browser, fill them in from your profile and tailored CV, and stop before Submit so you review and send it yourself.
 - **Run on a free-tier agent.** Most Indian freshers won't pay for a coding-agent plan. Port the commands so the workflow also runs in an agent with a free tier (for example Gemini CLI). This matters more for reach than any single feature.

@@ -25,6 +25,7 @@ Most AI job tools help you send more applications. JobHunter helps you send the 
 | **Pay in Indian terms** | LPA and ₹/month, always split into fixed, variable, joining bonus and ESOPs, so a padded CTC never looks like salary. Internship stipends and PPO odds scored separately. |
 | **Outreach over cover letters** | Indian startups rarely read cover letters, so `/outreach` finds the hiring manager, founder or alumnus and drafts the LinkedIn note, cold email or referral ask. You send it yourself. Cover letters are still there when a form asks. |
 | **Work email, one person at a time** | Optional: add your own [Hunter](https://hunter.io) or [Apollo](https://apollo.io) API key to `.env` and `/outreach` finds the hiring manager's work email, with an honest confidence score. One person per lookup, a daily cap, company domains only, and results cached so you never pay twice. |
+| **One-click drafts, you send** | Each cold email becomes a ready draft: in Gmail Drafts if you've connected Gmail to Claude Code, otherwise an `.eml` file that opens in Outlook or Mail with your CV already attached. Nothing is ever sent for you. |
 | **Rounds Indian companies run** | OA (HackerRank, HackerEarth, Codility), DSA, **machine coding / LLD**, HLD, project deep-dive, take-home review, and the HR round (expected CTC, notice period, "why are you leaving"). |
 | **Python only** | Every tool is stdlib Python 3.11+. No Node or Bun. |
 
@@ -68,7 +69,7 @@ Details, Windows notes and troubleshooting are in [SETUP.md](SETUP.md).
 ## Your data stays yours
 
 - `profile/`, `applications/`, `job_scraper/` and `documents/` are git-ignored. They never leave your machine unless you move them.
-- The tools only read public job feeds. Nothing logs into LinkedIn, Naukri or any other account, and nothing sends a message on your behalf.
+- The tools only read public job feeds, plus Hunter or Apollo if you add your own key. Nothing logs into LinkedIn, Naukri or any other account, and nothing sends a message on your behalf: emails become drafts you send yourself.
 - Job postings are treated as untrusted text: hidden HTML, invisible characters and "ignore previous instructions"-style lines are stripped and shown to you, never followed.
 - Nothing about you is made up. A separate reviewer agent checks every claim in a draft against your profile, and anything it can't trace is removed.
 

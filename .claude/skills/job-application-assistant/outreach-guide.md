@@ -34,6 +34,13 @@ Only when the user has added `HUNTER_API_KEY` or `APOLLO_API_KEY` to `.env`. Che
 
 **Follow-up**: one polite nudge after 5-7 working days, adding something new (a shipped project, a relevant post). Stop after two follow-ups.
 
+## Delivering a cold email
+
+The user always sends it. Make that one click, not ten:
+- A Gmail connector in the session → create a **draft** (never send).
+- No connector → `tools/email_draft.py` writes an `.eml` draft with the CV attached, plus a `mailto:` link.
+- Subject line: role + hook, under 80 characters. Body under 120 words. CV attached as `Firstname_Lastname_CV.pdf`.
+
 ## Rules
 
 - Every claim comes from `profile/candidate.md`.
