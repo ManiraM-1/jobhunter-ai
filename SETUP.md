@@ -36,7 +36,7 @@ git remote add upstream https://github.com/ManiraM-1/jobhunter-ai.git
 ```bash
 python -m pytest -q                                       # needs: pip install pytest
 python tools/ats_search.py check                          # every company board should say "ok"
-python tools/ats_search.py search --keywords "engineer" --city bengaluru --days 14 --limit 5
+python tools/ats_search.py search --keywords "engineer" --city bengaluru --limit 5
 ```
 
 ## 4. Build your profile
