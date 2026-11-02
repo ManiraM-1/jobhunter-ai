@@ -11,9 +11,30 @@ ROOT = Path(__file__).resolve().parent.parent
 needs_pdflatex = pytest.mark.skipif(not shutil.which("pdflatex"), reason="pdflatex not installed")
 
 
+def latex_errors(log: Path) -> str:
+    if not log.exists():
+        return "(no .log file was written)"
+    lines = log.read_text(encoding="utf-8", errors="replace").splitlines()
+    picked = []
+    for i, line in enumerate(lines):
+        if line.startswith("!"):
+            picked.extend(lines[i : i + 3])
+    return "\n".join(picked) or "\n".join(lines[-15:])
+
+
 def build(tex: Path, out: Path) -> Path:
-    subprocess.run(["pdflatex", "-interaction=nonstopmode", "-halt-on-error", f"-output-directory={out}", str(tex)],
-                   check=True, capture_output=True, timeout=180)
+    result = subprocess.run(
+        ["pdflatex", "-interaction=nonstopmode", "-halt-on-error", f"-output-directory={out}", str(tex)],
+        capture_output=True, timeout=180,
+    )
+    if result.returncode != 0:
+        stderr = result.stderr.decode(errors="replace").strip()
+        pytest.fail(
+            f"pdflatex could not build {tex.name}.\n\nLaTeX says:\n{latex_errors(out / (tex.stem + '.log'))}"
+            + (f"\n\npdflatex stderr: {stderr}" if stderr else "")
+            + "\n\nOn MiKTeX: open MiKTeX Console, run Updates, and set 'Install missing packages' to Always.",
+            pytrace=False,
+        )
     return out / (tex.stem + ".pdf")
 
 

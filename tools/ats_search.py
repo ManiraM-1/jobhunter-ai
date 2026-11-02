@@ -222,6 +222,7 @@ def cmd_search(args) -> int:
         india_only=not args.anywhere,
     )
     matched.sort(key=lambda j: j["posted"] or "", reverse=True)
+    total = len(matched)
     if args.limit:
         matched = matched[: args.limit]
     if not args.with_description:
@@ -229,7 +230,7 @@ def cmd_search(args) -> int:
             job.pop("description", None)
             job.pop("guard", None)
     emit({
-        "meta": {"companies_searched": len(companies), "postings_scanned": len(results), "matched": len(matched), "errors": errors},
+        "meta": {"companies_searched": len(companies), "postings_scanned": len(results), "matched": total, "returned": len(matched), "errors": errors},
         "results": matched,
     })
     return 0

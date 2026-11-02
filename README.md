@@ -1,10 +1,19 @@
 # JobHunter AI 🇮🇳
 
-**An AI job-search assistant for Indian job seekers, built on [Claude Code](https://claude.com/claude-code).** It runs on your machine and keeps your data there.
+**Fewer, better applications for Indian engineers.** An AI job-search assistant built on [Claude Code](https://claude.com/claude-code) that runs on your machine and keeps your data there.
 
-It finds roles at Indian companies, scores them against your profile, filters out fake jobs, tailors a one-page ATS-safe CV, drafts referral and cold-outreach messages, helps you ship take-home assignments, and preps you for OA, DSA, machine-coding and HR rounds.
+Most AI job tools help you send more applications. JobHunter helps you send the right ones: it finds real roles at Indian companies, throws out fake jobs and roles you aren't eligible for, tells you what a CTC actually means, tailors an honest one-page CV, and helps you reach a human (a hiring manager, founder or alumnus) instead of disappearing into an applicant pile. Then it preps you for the OA, machine-coding and HR rounds that follow.
 
 > Independent open-source project. Not affiliated with Anthropic.
+
+## The idea
+
+**Twenty targeted applications with a referral or a personal note beat three hundred sprayed ones.** Recruiters at Indian startups get hundreds of applications per role, and mass auto-applied ones are easy to spot and easy to ignore. So JobHunter is deliberately not an auto-apply bot:
+
+- It **filters before you apply**: scam checks, eligibility gates and an honest fit score, so you don't waste an evening on a role you'd never get.
+- It **tailors, never invents**: every line in your CV traces back to your own profile, and a second agent checks that.
+- It **gets you to a person**: referral asks, hiring-manager notes and follow-ups are first-class, not an afterthought.
+- **You stay in control**: it prepares everything, and you are the one who submits and sends.
 
 ## What's different for India
 

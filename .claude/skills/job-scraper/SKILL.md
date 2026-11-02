@@ -15,7 +15,8 @@ description: How /scrape searches Indian job sources - company ATS boards (Green
 
 - LinkedIn matches the whole posting, not just the title, so use **titles** as queries ("SDE 1", "Backend Engineer", "Software Engineer Intern"), not stacks ("java spring").
 - The ATS search matches **titles only**. Pass several synonyms: `--keywords "sde,software engineer,backend,developer,engineer i"`.
-- Freshers: exclude `senior,sr,staff,lead,principal,manager,director,architect,sde 3,sde iii`.
+- Freshers (0-1 yrs): exclude `senior,sr,staff,lead,principal,manager,director,architect,sde ii,sde 2,sde iii,sde 3,engineer ii,engineer iii`.
+- 1-3 yrs: exclude `senior,sr,staff,lead,principal,manager,director,architect,sde iii,sde 3,engineer iii`.
 - Interns: use `--keywords "intern,internship,trainee"` and LinkedIn `--level intern`.
 - Don't date-filter company boards: they list only open roles, and plenty were first published months ago. Use `tools/state.py new` to keep only roles you haven't seen.
 - City names are normalised: Bangalore → bengaluru; Gurgaon, Noida and Delhi → delhi-ncr.
