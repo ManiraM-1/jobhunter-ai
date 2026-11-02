@@ -6,6 +6,7 @@ documents/*
 !documents/README.md
 .env
 .env.*
+!.env.example
 
 # LaTeX build files
 *.aux

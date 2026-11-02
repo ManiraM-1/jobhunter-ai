@@ -24,6 +24,7 @@ Most AI job tools help you send more applications. JobHunter helps you send the 
 | **Eligibility gates** | Batch / graduation year, CGPA and "60% throughout" cut-offs, branch restrictions, backlogs, service bonds, notice period vs "immediate joiner". |
 | **Pay in Indian terms** | LPA and ₹/month, always split into fixed, variable, joining bonus and ESOPs, so a padded CTC never looks like salary. Internship stipends and PPO odds scored separately. |
 | **Outreach over cover letters** | Indian startups rarely read cover letters, so `/outreach` finds the hiring manager, founder or alumnus and drafts the LinkedIn note, cold email or referral ask. You send it yourself. Cover letters are still there when a form asks. |
+| **Work email, one person at a time** | Optional: add your own [Hunter](https://hunter.io) or [Apollo](https://apollo.io) API key to `.env` and `/outreach` finds the hiring manager's work email, with an honest confidence score. One person per lookup, a daily cap, company domains only, and results cached so you never pay twice. |
 | **Rounds Indian companies run** | OA (HackerRank, HackerEarth, Codility), DSA, **machine coding / LLD**, HLD, project deep-dive, take-home review, and the HR round (expected CTC, notice period, "why are you leaving"). |
 | **Python only** | Every tool is stdlib Python 3.11+. No Node or Bun. |
 

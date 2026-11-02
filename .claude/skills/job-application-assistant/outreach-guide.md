@@ -11,6 +11,16 @@ In Indian hiring, a short note to the right person often beats the cover letter.
 
 Give each person's name, title and the public link you found them on. If research turns up no one confidently, say so instead of guessing a name or email. Never guess email patterns and present them as real.
 
+## Finding a work email (optional, needs the user's own key)
+
+Only when the user has added `HUNTER_API_KEY` or `APOLLO_API_KEY` to `.env`. Check with `python tools/contact_lookup.py status`.
+
+- **Who's there:** `python tools/contact_lookup.py people --domain <company-domain> --department engineering --seniority senior,executive --limit 5` lists up to 10 people at that company (Hunter only). Use it to confirm a name you found by research, or to find the engineering manager when research came up empty.
+- **One person's email:** `python tools/contact_lookup.py find --first <First> --last <Last> --domain <company-domain>`. Add `--provider apollo --linkedin <profile URL>` for Apollo. Each call spends a credit unless the result is already cached.
+- **Report the confidence honestly.** Say "verified" or "valid" only when the tool says so. A Hunter score under 70, or a status of `accept_all`, `unknown` or `unverified`, means **likely, not confirmed**; say that, and prefer LinkedIn for that person.
+- **Limits are deliberate:** one person per `find`, at most 10 per `people`, a daily cap, company domains only. If the user hits the cap, don't work around it. JobHunter is for a few targeted contacts a day, not lists.
+- Look up only people connected to a role the user is applying to, and only when they ask for outreach on it.
+
 ## Formats
 
 **LinkedIn connection note**: keep it under 200 characters. LinkedIn caps invite notes, and free accounts get a limited number of personalised notes a month, so save them for people who matter. One hook, one ask.
