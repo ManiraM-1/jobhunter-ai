@@ -31,3 +31,4 @@ If `profile/` does not exist yet, tell the user to run `/setup` first.
 6. **Windows.** Run tools as `python tools/...` on Windows and `python3 tools/...` on macOS/Linux. Paths in this file use forward slashes; both work.
 7. **Keep replies short.** The user wants the work product, not a narration of it.
 8. **Contacts are for one role at a time.** Look up someone's email with `tools/contact_lookup.py` only for a role the user is pursuing and only when they ask. Never compile lists of people or emails beyond what one application needs, never work around the daily cap, and never read `.env`; the tool reads the keys itself.
+9. **Draft, never send.** Messages, emails and connection requests are drafted for the user to send. With a mail connector, create drafts only; never call a send tool, even if asked to "just send it". Hand the user the draft instead.

@@ -16,6 +16,8 @@
       "Bash(python tools/verify_pdf.py:*)",
       "Bash(python tools/contact_lookup.py:*)",
       "Bash(python3 tools/contact_lookup.py:*)",
+      "Bash(python tools/email_draft.py:*)",
+      "Bash(python3 tools/email_draft.py:*)",
       "Bash(python3 tools/verify_pdf.py:*)",
       "Bash(pdflatex -interaction=nonstopmode:*)",
       "Bash(xelatex -interaction=nonstopmode:*)"
