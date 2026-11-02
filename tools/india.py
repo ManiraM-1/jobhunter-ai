@@ -31,7 +31,7 @@ CITY_ALIASES = {
     "vadodara": ["vadodara", "baroda"],
     "goa": ["goa", "panaji"],
     "patna": ["patna"],
-    "madurai": ["madurai", "madura"],
+    "madurai": ["madurai"],
     "tiruchirappalli": ["tiruchirappalli", "tiruchirapalli", "trichy", "trichinopoly"],
     "warangal": ["warangal"],
     "guntur": ["guntur"],
