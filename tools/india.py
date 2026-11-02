@@ -31,6 +31,18 @@ CITY_ALIASES = {
     "vadodara": ["vadodara", "baroda"],
     "goa": ["goa", "panaji"],
     "patna": ["patna"],
+    "madurai": ["madurai"],
+    "tiruchirappalli": ["tiruchirappalli", "tiruchirapalli", "trichy", "trichinopoly"],
+    "warangal": ["warangal"],
+    "guntur": ["guntur"],
+    "nashik": ["nashik", "nasik"],
+    "chhatrapati sambhajinagar": ["chhatrapati sambhajinagar", "sambhajinagar", "aurangabad"],
+    "hubballi": ["hubballi", "hubli"],
+    "belagavi": ["belagavi", "belgaum"],
+    "dehradun": ["dehradun", "dehra dun"],
+    "raipur": ["raipur"],
+    "ranchi": ["ranchi"],
+    "guwahati": ["guwahati", "gauhati"],
 }
 
 STATES = [
